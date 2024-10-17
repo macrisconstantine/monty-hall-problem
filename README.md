@@ -16,7 +16,7 @@ Will the probability of a correct guess be affected by whether or not the guess 
  
 This program illustrates the problem and compares the probability of a correct guess via the "switch" method to the probability of a correct guess using the "non-switch" method.
 
-## How to run
+### How to run
 - This is a simple C script.
 - Download the file or fork the repo.
 - Compile and run in a terminal or IDE.
