@@ -1,9 +1,12 @@
 ﻿# ITC3006-exercises
 ## About
-- This small C program illustrates the Monty Hall Problem and the probabilities involved.
-- It runs a series of trials and displays the results to statistically demonstrate the validity of the initially counter-intuitive logic. 
+This repository hold some small programming exercises from a course called Mathematic for Computing.
 
 ## The Monty Hall Problem
+- This small C program illustrates the Monty Hall Problem and the probabilities involved.
+- It runs a series of trials and displays the results to statistically demonstrate the validity of the initially counter-intuitive logic.
+
+### What is the Monty Hall Problem?
 The Monty Hall problem is as follows: there are three doors. Behind two of the doors, there is a goat (an "incorrect guess"). Behind the third door, there is an expensive car (the "correct guess"). A contestant is allowed to select one of the three doors, so his initial guess has a 1 in 3 probability of being correct.
 
 Before the door is opened and the contestant's first guess is shown to be correct or incorrect, Monty Hall (who knows what is behind the doors), reveals a goat from behind one
