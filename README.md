@@ -1,6 +1,6 @@
 ﻿# ITC3006-exercises
 ## About
-This repository hold some small programming exercises from a course called Mathematic for Computing.
+This repository holds some small programming exercises from a course called Mathematics for Computing.
 
 ## The Monty Hall Problem
 - This small C program illustrates the Monty Hall Problem and the probabilities involved.
