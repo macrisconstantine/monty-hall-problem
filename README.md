@@ -1,4 +1,4 @@
-﻿# ITC3006-exercises
+﻿# monty-hall-problem
 - This small C program illustrates the Monty Hall Problem and the probabilities involved.
 - It runs a series of trials and displays the results to statistically demonstrate the validity of the initially counter-intuitive logic.
 
