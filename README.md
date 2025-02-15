@@ -1,4 +1,5 @@
 ﻿# monty-hall-problem
+ TODO: improve website make it enjoyable with animations and better explanation and themed, also add link image to website
 ## About
 This small C program illustrates the Monty Hall Problem and the probabilities involved. It runs a series of trials and displays the results to statistically demonstrate the validity of the initially counter-intuitive logic.
 
