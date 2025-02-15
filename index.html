@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monty Hall Simulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .doors {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .door {
+            width: 100px;
+            height: 150px;
+            margin: 10px;
+            background-color: brown;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        .door.revealed {
+            background-color: gray;
+        }
+        .door.car {
+            background-color: gold;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monty Hall Problem Simulation</h1>
+    <p>Pick a door, then decide whether to switch or stay.</p>
+    <div class="doors">
+        <div class="door" id="door1" onclick="chooseDoor(1)">1</div>
+        <div class="door" id="door2" onclick="chooseDoor(2)">2</div>
+        <div class="door" id="door3" onclick="chooseDoor(3)">3</div>
+    </div>
+    <button onclick="simulate(true)">Switch</button>
+    <button onclick="simulate(false)">Stay</button>
+    <p id="result"></p>
+
+    <script>
+        let correctDoor, chosenDoor, revealedDoor;
+
+        function resetGame() {
+            correctDoor = Math.floor(Math.random() * 3) + 1;
+            chosenDoor = null;
+            revealedDoor = null;
+            document.querySelectorAll('.door').forEach(door => {
+                door.classList.remove('revealed', 'car');
+            });
+            document.getElementById("result").innerText = "";
+        }
+
+        function chooseDoor(door) {
+            chosenDoor = door;
+            revealGoat();
+        }
+
+        function revealGoat() {
+            let possibleDoors = [1, 2, 3].filter(d => d !== chosenDoor && d !== correctDoor);
+            revealedDoor = possibleDoors[Math.floor(Math.random() * possibleDoors.length)];
+            document.getElementById(`door${revealedDoor}`).classList.add('revealed');
+        }
+
+        function simulate(switchChoice) {
+            if (!chosenDoor) {
+                alert("Choose a door first!");
+                return;
+            }
+            if (switchChoice) {
+                chosenDoor = [1, 2, 3].find(d => d !== chosenDoor && d !== revealedDoor);
+            }
+            document.getElementById(`door${correctDoor}`).classList.add('car');
+            document.getElementById("result").innerText = chosenDoor === correctDoor 
+                ? "You won the car! 🚗"
+                : "You got a goat! 🐐";
+            setTimeout(resetGame, 3000);
+        }
+
+        resetGame();
+    </script>
+</body>
+</html>
