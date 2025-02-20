@@ -15,7 +15,7 @@ This program illustrates the problem and compares the probability of a correct g
 
 ## Try the Monty Hall problem
 - Click on the website link on the right panel in this repo.
-- Follow the instructions and try your luck at guessing the right door.
+- Follow the instructions and try your luck at guessing the correct door--if you get it right, you win a new car!
   
 ## How to run the script yourself
 - This is a simple C script.
